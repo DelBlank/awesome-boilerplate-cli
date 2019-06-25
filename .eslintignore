@@ -6,4 +6,3 @@ package-lock.json
 yarn.lock
 .dll/
 node_modules/
-boilerplate/

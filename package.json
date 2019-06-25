@@ -4,7 +4,7 @@
   "description": "实用模板脚手架",
   "main": "./dist/index.js",
   "scripts": {
-    "lint": "eslint \"{src,bin,__tests__}/**/*.js\" --fix --format codeframe",
+    "lint": "eslint \"{src,bin,__tests__}/**/*.js\" --fix --format codeframe --config ./.eslintrc",
     "lint-staged": "lint-staged",
     "test": "jest --forceExit --detectOpenHandles --passWithNoTests --config jest.config.json",
     "build": "rm -rf dist/ && babel src/ -d dist/ --copy-files"
@@ -29,7 +29,7 @@
   },
   "lint-staged": {
     "**/*.js": [
-      "eslint --fix --format codeframe",
+      "eslint --fix --format codeframe --config ./.eslintrc",
       "git add"
     ],
     "*.md": [
