@@ -1,0 +1,21 @@
+{
+  "verbose": true,
+  "notify": true,
+  "testEnvironment": "node",
+  "collectCoverage": true,
+  "roots": [
+    "<rootDir>/__tests__"
+  ],
+  "modulePaths": [
+    "<rootDir>/src"
+  ],
+  "moduleDirectories": [
+    "<rootDir>/__mocks__",
+    "node_modules"
+  ],
+  "coverageReporters": [
+    "html",
+    "text",
+    "text-summary"
+  ]
+}

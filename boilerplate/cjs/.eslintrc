@@ -1,0 +1,29 @@
+{
+  "extends": ["standard", "airbnb-base", "prettier"],
+  "plugins": [
+    "prettier",
+    "node"
+  ],
+  "rules": {
+    "global-require": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 100,
+        "semi": false,
+        "singleQuote": true
+      }
+    ]
+  },
+  "env": {
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js"]
+      }
+    }
+  }
+}

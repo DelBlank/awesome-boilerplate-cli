@@ -1,0 +1,8 @@
+coverage/
+build/
+dist/
+package.json
+package-lock.json
+yarn.lock
+.dll/
+node_modules/

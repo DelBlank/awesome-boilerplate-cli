@@ -1,0 +1,11 @@
+.idea
+.DS_Store
+.vscode
+*.log
+build
+dist
+coverage
+node_modules
+.happypack
+*.rej
+package-lock.json
