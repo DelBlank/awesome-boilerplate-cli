@@ -33,7 +33,7 @@ function handleProgress() {
   const bplPath = `${path.join(__dirname, '../boilerplate', bplType)}/.`
   const commonBplPath = `${path.join(__dirname, '../boilerplate/common')}/.`
 
-  Promise.resolve(progress.start())
+  return Promise.resolve(progress.start())
     .then(() => {
       copyDirectory(bplPath, root)
       copyDirectory(commonBplPath, root)
@@ -46,9 +46,7 @@ function handleProgress() {
       progress.fail()
       handleError(
         `abc: 模板拷贝出错
-
-${message}
-      `
+        ${message}`
       )
     })
 }
@@ -57,13 +55,15 @@ ${message}
 function cloneBplToLocal() {
   if (!bplType) {
     handleError('abc: 请指定具体模板')
+    return
   }
 
   if (!bplNames.includes(bplType)) {
     handleError('abc: 未找到同名模板')
+    return
   }
 
-  handleProgress()
+  return handleProgress()
 }
 
-cloneBplToLocal()
+module.exports = cloneBplToLocal()

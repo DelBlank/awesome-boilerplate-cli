@@ -7,6 +7,7 @@
   "rules": {
     "global-require": "warn",
     "import/no-unresolved": "warn",
+    "consistent-return": "warn",
     "prettier/prettier": [
       "error",
       {

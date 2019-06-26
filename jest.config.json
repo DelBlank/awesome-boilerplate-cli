@@ -7,7 +7,7 @@
     "<rootDir>/__tests__"
   ],
   "modulePaths": [
-    "<rootDir>/src"
+    "<rootDir>/"
   ],
   "moduleDirectories": [
     "<rootDir>/__mocks__",
