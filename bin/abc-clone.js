@@ -10,7 +10,7 @@ commander.parse(process.argv)
 const bplType = commander.args[0]
 const progress = ora(`abc: 正在拷贝模板`)
 const root = process.cwd()
-const bplNames = ['cjs']
+const bplNames = ['cjs', 'es6']
 
 // 拷贝目录
 function copyDirectory(source, dest) {

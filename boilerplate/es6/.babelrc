@@ -1,15 +1,16 @@
 {
   "presets": [
-    ["@babel/env", { "modules": "cjs"}]
+    ["@babel/env", { "modules": false}]
   ],
   "plugins": [
     ["@babel/transform-runtime", {
       "corejs": 2
     }],
+    "@babel/syntax-dynamic-import",
     ["@babel/proposal-decorators", {"legacy": true}],
     "@babel/plugin-transform-async-to-generator",
     "@babel/proposal-class-properties",
-    "@babel/proposal-object-rest-spread",
+    "@babel/proposal-object-rest-spread"
   ],
   "sourceMaps": true,
   "retainLines": true

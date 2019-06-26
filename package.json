@@ -37,6 +37,13 @@
       "git add"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-publish": "npm run build"
+    }
+  },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@babel/runtime": "^7.0.0",
