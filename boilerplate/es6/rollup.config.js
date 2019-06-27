@@ -16,14 +16,14 @@ export default [
   {
     input: 'src/index.js',
     output: {
-      file: 'dist/es5/index.js',
+      file: 'dist/index.js',
       format: 'cjs'
     }
   },
   {
     input: 'src/index.js',
     output: {
-      file: 'dist/es6/index.js',
+      file: 'es/index.js',
       format: 'esm'
     }
   }

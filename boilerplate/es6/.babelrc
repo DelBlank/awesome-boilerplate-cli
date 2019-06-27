@@ -12,6 +12,11 @@
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
   ],
+  "env": {
+    "test": {
+      "presets": [["@babel/env", {"modules": "commonjs"}]]
+    }
+  },
   "sourceMaps": true,
   "retainLines": true
 }

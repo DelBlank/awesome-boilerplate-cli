@@ -3,17 +3,18 @@
   "version": "",
   "description": "",
   "main": "./dist/index.js",
+  "module": "./es/index.js",
   "scripts": {
     "lint": "eslint \"{src,__tests__}/**/*.js\" --fix --format codeframe",
     "lint-staged": "lint-staged",
     "test": "jest --forceExit --detectOpenHandles --passWithNoTests --config jest.config.json",
-    "build": "rm -rf dist && rollup --config ./rollup.config.js"
+    "build": "rm -rf {dist,es} && rollup -c"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
-  "files": ["dist"],
+  "files": ["dist", "es"],
   "author": {
     "name": "",
     "email": ""
@@ -32,6 +33,13 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-publish": "npm run build"
+    }
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",

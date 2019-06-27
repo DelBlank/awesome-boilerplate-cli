@@ -4,6 +4,7 @@
 *.log
 build
 dist
+es
 coverage
 node_modules
 .happypack
