@@ -1,0 +1,23 @@
+{
+  "verbose": true,
+  "notify": true,
+  "collectCoverage": true,
+  "transform": {
+    "^.+\\.js?$": "babel-jest"
+  },
+  "roots": [
+    "<rootDir>/__tests__"
+  ],
+  "modulePaths": [
+    "<rootDir>/src"
+  ],
+  "moduleDirectories": [
+    "<rootDir>/__mocks__",
+    "node_modules"
+  ],
+  "coverageReporters": [
+    "html",
+    "text",
+    "text-summary"
+  ]
+}
