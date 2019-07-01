@@ -1,9 +1,6 @@
 {
-  "extends": ["standard", "airbnb-base", "prettier"],
-  "plugins": [
-    "prettier",
-    "import"
-  ],
+  "extends": ["airbnb-base", "prettier", "plugin:react/recommended", "plugin:jsx-a11y/recommended"],
+  "plugins": ["prettier", "import", "react", "jsx-a11y"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -12,7 +9,8 @@
         "semi": false,
         "singleQuote": true
       }
-    ]
+    ],
+    "class-methods-use-this": "warn"
   },
   "env": {
     "jest": true
@@ -21,7 +19,7 @@
     "import/resolver": {
       "node": {
         "paths": ["src"],
-        "extensions": [".js"]
+        "extensions": [".js", ".jsx"]
       }
     }
   }

@@ -1,7 +1,7 @@
-import entry from 'index'
+import utils from 'utils'
 
-describe('test src entry', () => {
-  it('should get right entry', () => {
-    expect(entry()).toBe(`this is source code entry`)
+describe('test src utils', () => {
+  it('should get right utils', () => {
+    expect(utils()).toBe(`this is source utils`)
   })
 })
