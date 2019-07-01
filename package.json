@@ -1,13 +1,11 @@
 {
   "name": "awesome-boilerplate-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "实用模板脚手架",
-  "main": "./dist/index.js",
   "scripts": {
     "lint": "eslint \"{src,bin,__tests__}/**/*.js\" --fix --format codeframe",
     "lint-staged": "lint-staged",
-    "test": "jest --forceExit --detectOpenHandles --config jest.config.json",
-    "build": "rm -rf dist/ && babel src/ -d dist/ --copy-files"
+    "test": "jest --forceExit --detectOpenHandles --config jest.config.json"
   },
   "bin": {
     "abc": "./bin/abc.js"
@@ -17,7 +15,8 @@
     "url": "https://github.com/DelBlank/awesome-boilerplate-cli"
   },
   "files": [
-    "dist"
+    "bin",
+    "boilerplate"
   ],
   "author": {
     "name": "delblank",

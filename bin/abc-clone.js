@@ -32,11 +32,13 @@ function handleError(message) {
 function handleProgress() {
   const bplPath = `${path.join(__dirname, '../boilerplate', bplType)}/.`
   const commonBplPath = `${path.join(__dirname, '../boilerplate/common')}/.`
+  const pkgPath = `${path.join(__dirname, '../boilerplate/package', bplType)}.json`
 
   return Promise.resolve(progress.start())
     .then(() => {
       copyDirectory(commonBplPath, root)
       copyDirectory(bplPath, root)
+      copyDirectory(pkgPath, `${root}/package.json`)
     })
     .then(() => {
       progress.succeed()
