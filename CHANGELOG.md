@@ -1,29 +1,6 @@
-## 0.1.0 (YYYY-MM-DD)
-
-**breaking change**
-
--
+## 0.1.0 (2019-07-01)
 
 feature:
 
--
-
-bugfix:
-
--
-
-refactor:
-
--
-
-docs:
-
--
-
-style:
-
--
-
-other:
-
--
+- 项目初始化
+- 模板拷贝功能（包括 `cjs`、`es6`、`react` 模板）
