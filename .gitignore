@@ -9,3 +9,4 @@ node_modules
 .happypack
 *.rej
 package-lock.json
+yarn.lock
