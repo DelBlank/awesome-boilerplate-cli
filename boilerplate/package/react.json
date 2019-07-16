@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "module": "./es/index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon --inspect -w webpack.config.js -w server.js -w src server.js",
     "lint": "eslint \"{src,__tests__}/**/*.{js,jsx}\" --fix --format codeframe",
     "lint-staged": "lint-staged",
     "test": "jest --forceExit --detectOpenHandles --passWithNoTests --config jest.config.json",
@@ -28,7 +28,7 @@
   },
   "homepage": "",
   "lint-staged": {
-    "**/*.js": [
+    "**/*.{js,jsx}": [
       "npm run lint",
       "git add"
     ],
@@ -93,11 +93,12 @@
     "mini-css-extract-plugin": "^0.5.0",
     "jest-cli": "^24.0.0",
     "lint-staged": "^3.0.0",
+    "nodemon": "^1.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.0.0",
     "url-loader": "^1.0.0",
-    "webpack": "4.28.4",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack": "4.0.0",
+    "webpack-cli": "^3.0.0",
+    "webpack-dev-server": "^3.0.0"
   }
 }

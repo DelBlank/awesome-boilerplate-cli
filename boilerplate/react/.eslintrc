@@ -11,7 +11,9 @@
         "singleQuote": true
       }
     ],
-    "class-methods-use-this": "warn"
+    "class-methods-use-this": "warn",
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["demo/*", "server.js", "webpack.config.js"]}]
   },
   "env": {
     "jest": true

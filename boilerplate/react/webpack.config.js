@@ -7,7 +7,7 @@ const HappyPack = require('happypack')
 
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 
-const srcPath = path.join(__dirname, '/src')
+const srcPath = path.join(__dirname, './src')
 const buildPath = path.join(__dirname, './build')
 
 module.exports = {
@@ -28,9 +28,7 @@ module.exports = {
     alias: {
       common: path.join(srcPath, 'common'),
       components: path.join(srcPath, 'components'),
-      utils: path.join(srcPath, 'utils'),
-      assets: path.join(srcPath, 'assets'),
-      pages: path.join(srcPath, 'pages')
+      utils: path.join(srcPath, 'utils')
     }
   },
   resolveLoader: {
@@ -116,6 +114,7 @@ module.exports = {
       verbose: false,
       verboseWhenProfiling: false
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new HtmlWebpackPlugin({
       inject: true,

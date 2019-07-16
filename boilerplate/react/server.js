@@ -18,7 +18,7 @@ webpackConfig.entry.app.unshift(
 )
 const compiler = webpack(webpackConfig)
 const server = new WebpackDevServer(compiler, {
-  contentBase: path.join(__dirname, '../build'),
+  contentBase: path.join(__dirname, './build'),
   quiet: true,
   noInfo: true,
   compress: true,
