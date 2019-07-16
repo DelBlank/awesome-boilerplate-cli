@@ -1,6 +1,6 @@
 {
   "name": "awesome-boilerplate-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "实用模板脚手架",
   "scripts": {
     "lint": "eslint \"{src,bin,__tests__}/**/*.js\" --fix --format codeframe",

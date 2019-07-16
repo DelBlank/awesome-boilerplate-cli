@@ -80,6 +80,7 @@ module.exports = {
       {
         test: /\.(less|css)$/,
         use: [
+          'css-hot-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
